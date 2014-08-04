@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74351644198FBAD900EC5304 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 74351643198FBAD900EC5304 /* README.md */; };
+		7435164A198FC7F100EC5304 /* QHAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 74351649198FC7F100EC5304 /* QHAnnotationView.m */; };
 		7449C026198F2DF500BEA682 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C025198F2DF500BEA682 /* Foundation.framework */; };
 		7449C028198F2DF500BEA682 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C027198F2DF500BEA682 /* CoreGraphics.framework */; };
 		7449C02A198F2DF500BEA682 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C029198F2DF500BEA682 /* UIKit.framework */; };
@@ -24,7 +26,6 @@
 		7449C05B198F2FB400BEA682 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C05A198F2FB400BEA682 /* MapKit.framework */; };
 		7449C05D198F2FBA00BEA682 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C05C198F2FBA00BEA682 /* CoreLocation.framework */; };
 		7449C061198F38A800BEA682 /* QHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C060198F38A800BEA682 /* QHLocationManager.m */; };
-		7449C06A198F5C6700BEA682 /* QHAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C069198F5C6700BEA682 /* QHAnnotationView.m */; };
 		7449C06D198F5E6600BEA682 /* QHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C06C198F5E6600BEA682 /* QHAnnotation.m */; };
 		7449C071198F6E2000BEA682 /* QHGeoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C070198F6E2000BEA682 /* QHGeoMapViewController.m */; };
 		7449C075198F6E7200BEA682 /* QHAntiLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C074198F6E7200BEA682 /* QHAntiLocation.m */; };
@@ -42,6 +43,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74351643198FBAD900EC5304 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
+		74351648198FC7F100EC5304 /* QHAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAnnotationView.h; sourceTree = "<group>"; };
+		74351649198FC7F100EC5304 /* QHAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAnnotationView.m; sourceTree = "<group>"; };
 		7449C022198F2DF500BEA682 /* QHAntipodesMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QHAntipodesMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7449C025198F2DF500BEA682 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7449C027198F2DF500BEA682 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,8 +70,6 @@
 		7449C05C198F2FBA00BEA682 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7449C05F198F38A800BEA682 /* QHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHLocationManager.h; sourceTree = "<group>"; };
 		7449C060198F38A800BEA682 /* QHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHLocationManager.m; sourceTree = "<group>"; };
-		7449C068198F5C6700BEA682 /* QHAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAnnotationView.h; sourceTree = "<group>"; };
-		7449C069198F5C6700BEA682 /* QHAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAnnotationView.m; sourceTree = "<group>"; };
 		7449C06B198F5E6600BEA682 /* QHAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAnnotation.h; sourceTree = "<group>"; };
 		7449C06C198F5E6600BEA682 /* QHAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAnnotation.m; sourceTree = "<group>"; };
 		7449C06E198F62CA00BEA682 /* QHViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHViewTag.h; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		7449C02C198F2DF500BEA682 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				74351643198FBAD900EC5304 /* README.md */,
 				7449C06E198F62CA00BEA682 /* QHViewTag.h */,
 				7449C02D198F2DF500BEA682 /* QHAntipodesMap-Info.plist */,
 				7449C02E198F2DF500BEA682 /* InfoPlist.strings */,
@@ -202,8 +205,8 @@
 		7449C067198F5C4200BEA682 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7449C068198F5C6700BEA682 /* QHAnnotationView.h */,
-				7449C069198F5C6700BEA682 /* QHAnnotationView.m */,
+				74351648198FC7F100EC5304 /* QHAnnotationView.h */,
+				74351649198FC7F100EC5304 /* QHAnnotationView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74351644198FBAD900EC5304 /* README.md in Resources */,
 				7449C030198F2DF500BEA682 /* InfoPlist.strings in Resources */,
 				7449C038198F2DF500BEA682 /* Images.xcassets in Resources */,
 			);
@@ -319,7 +323,7 @@
 				7449C061198F38A800BEA682 /* QHLocationManager.m in Sources */,
 				7449C071198F6E2000BEA682 /* QHGeoMapViewController.m in Sources */,
 				7449C056198F2E7800BEA682 /* QHRootViewController.m in Sources */,
-				7449C06A198F5C6700BEA682 /* QHAnnotationView.m in Sources */,
+				7435164A198FC7F100EC5304 /* QHAnnotationView.m in Sources */,
 				7449C059198F2F9100BEA682 /* QHMapLocationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,6 +528,7 @@
 				7449C050198F2DF500BEA682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7449C051198F2DF500BEA682 /* Build configuration list for PBXNativeTarget "QHAntipodesMapTests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +537,7 @@
 				7449C053198F2DF500BEA682 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

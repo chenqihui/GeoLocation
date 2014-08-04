@@ -12,14 +12,13 @@
 #import "QHAnnotation.h"
 
 @interface QHMapLocationViewController ()<MKMapViewDelegate, CLLocationManagerDelegate>
-{
-    BOOL _bShowing;
-}
 
 @property (nonatomic, readwrite, retain) MKMapView *mapV;
 
 @end
-
+/*
+ 这里使用CLLocationManager和MKMapView的showsUserLocation获取用户定位的作用时一样的
+ */
 @implementation QHMapLocationViewController
 
 - (void)dealloc
@@ -30,8 +29,6 @@
 
 - (void)viewDidLoad
 {
-    _bShowing = YES;
-    
 //    //初始纬度，经度//latitude = -23.125611058498336, longitude = -66.622473329806212
 //    CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(-23.125611058498336, -66.622473329806212);
 //    //缩放比例
@@ -47,11 +44,8 @@
     //MKMapTypeHybrid    混合
 //    _mapV.region = region;//显示区域
     _mapV.delegate = self;
-    _mapV.showsUserLocation = YES;
+//    _mapV.showsUserLocation = YES;
     [self.view addSubview:_mapV];
-    
-//    [[QHLocationManager defaultManager] setMapView:_mapV];
-//    [[QHLocationManager defaultManager] startLocation];
     
     //定位
     CLLocationManager* manager = [[CLLocationManager alloc]init];
@@ -72,12 +66,12 @@
     {
         [_delegate geoCLLocationCoordinate2D:coordinate];
     }
-    _bShowing = YES;
     CLGeocoder *clGeoCoder = [[[CLGeocoder alloc] init] autorelease];
     CLGeocodeCompletionHandler handle = ^(NSArray *placemarks, NSError *error)
     {
         for (CLPlacemark * placeMark in placemarks)
         {
+            //通过坐标获取位置信息
             NSDictionary *addressDic=placeMark.addressDictionary;
             
 //            NSLog(@"%@", addressDic);
@@ -85,8 +79,8 @@
 //            NSString *city=[addressDic objectForKey:@"City"];
 //            NSString *subLocality=[addressDic objectForKey:@"SubLocality"];
 //            NSString *street=[addressDic objectForKey:@"Street"];
-            __block NSString *Name = [addressDic objectForKey:@"Name"];
-            __block NSString *FormattedAddressLines = [[addressDic objectForKey:@"FormattedAddressLines"] objectAtIndex:0];
+            NSString *Name = [addressDic objectForKey:@"Name"];
+            NSString *FormattedAddressLines = [[addressDic objectForKey:@"FormattedAddressLines"] objectAtIndex:0];
 //            self.lastProvince = state;
 //            self.lastCity = city;
 //            NSString *lastAddress=[NSString stringWithFormat:@"%@%@%@%@",state,city,subLocality,street];
@@ -98,13 +92,23 @@
                 [_mapV addAnnotation:an];
                 [_mapV setCenterCoordinate:coordinate animated:YES];
                 [an release];
-                
-                _bShowing = NO;
             });
         }
     };
     CLLocation *newLocation = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
     [clGeoCoder reverseGeocodeLocation:newLocation completionHandler:handle];
+    
+//    [[QHLocationManager defaultManager] getAddressInfo:coordinate complete:^(NSDictionary *addressDic) {
+//        
+//        NSString *Name = [addressDic objectForKey:@"Name"];
+//        NSString *FormattedAddressLines = [[addressDic objectForKey:@"FormattedAddressLines"] objectAtIndex:0];
+//        
+//        [_mapV removeAnnotations:_mapV.annotations];
+//        QHAnnotation* an = [[QHAnnotation alloc] initWithTitle:Name SubTitle:FormattedAddressLines Coordinate:coordinate];
+//        [_mapV addAnnotation:an];
+//        [_mapV setCenterCoordinate:coordinate animated:YES];
+//        [an release];
+//    }];
 }
 
 - (CLLocationCoordinate2D)getGeoCLLocationCoordinate2D
@@ -112,6 +116,12 @@
     if ([_mapV.annotations count] <= 0)
         return CLLocationCoordinate2DMake(-999, -999);
     return ((QHAnnotation *)[_mapV.annotations objectAtIndex:0]).coordinate;
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [self.view setFrame:frame];
+    [_mapV setFrame:self.view.bounds];
 }
 
 #pragma mark - viewDidLoad UILongPressGestureRecognize longPress:
@@ -122,29 +132,27 @@
     {
         CGPoint point = [longPress locationInView:_mapV];
         CLLocationCoordinate2D coordinate = [_mapV convertPoint:point toCoordinateFromView:_mapV];
-//        QHAnnotation* an = [[QHAnnotation alloc] initWithTitle:@"title" SubTitle:@"subtitle" Coordinate:coordinate];
-//        [_mapV addAnnotation:an];
-//        [an release];
         
         [self reverLocation:coordinate];
     }
 }
 
 #pragma mark - CLLocationManagerDelegate
+
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    _bShowing = YES;
     //得到定位后的位置
     CLLocationCoordinate2D coordinate = newLocation.coordinate;
     MKCoordinateSpan span = MKCoordinateSpanMake(0.1, 0.1);
     MKCoordinateRegion region = MKCoordinateRegionMake(coordinate, span);
     [_mapV setRegion:region animated:YES];
+    
+    [self reverLocation:coordinate];
     //停止定位
     [manager stopUpdatingLocation];
     [manager release];
-    
-    _bShowing = NO;
 }
+
 -(void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
     NSLog(@"定位失败");
@@ -163,13 +171,9 @@
 //    theRegion.span=theSpan;
 //    [mapView setRegion:theRegion];
     
-//    QHAnnotation *annotation = [[QHAnnotation alloc] initWithTitle:userLocation.title SubTitle:userLocation.subtitle Coordinate:userLocation.location.coordinate];
-//    [_mapV addAnnotation:annotation];
-//    [annotation release];
+//    [self reverLocation:userLocation.coordinate];
     
-    [self reverLocation:userLocation.coordinate];
-    
-    mapView.showsUserLocation = NO;
+//    mapView.showsUserLocation = NO;
 }
 
 - (void)mapView:(MKMapView *)mapView didFailToLocateUserWithError:(NSError *)error
