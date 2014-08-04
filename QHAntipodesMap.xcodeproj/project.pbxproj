@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7449C026198F2DF500BEA682 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C025198F2DF500BEA682 /* Foundation.framework */; };
+		7449C028198F2DF500BEA682 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C027198F2DF500BEA682 /* CoreGraphics.framework */; };
+		7449C02A198F2DF500BEA682 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C029198F2DF500BEA682 /* UIKit.framework */; };
+		7449C030198F2DF500BEA682 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7449C02E198F2DF500BEA682 /* InfoPlist.strings */; };
+		7449C032198F2DF500BEA682 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C031198F2DF500BEA682 /* main.m */; };
+		7449C036198F2DF500BEA682 /* QHAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C035198F2DF500BEA682 /* QHAppDelegate.m */; };
+		7449C038198F2DF500BEA682 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7449C037198F2DF500BEA682 /* Images.xcassets */; };
+		7449C03F198F2DF500BEA682 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C03E198F2DF500BEA682 /* XCTest.framework */; };
+		7449C040198F2DF500BEA682 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C025198F2DF500BEA682 /* Foundation.framework */; };
+		7449C041198F2DF500BEA682 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C029198F2DF500BEA682 /* UIKit.framework */; };
+		7449C049198F2DF500BEA682 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7449C047198F2DF500BEA682 /* InfoPlist.strings */; };
+		7449C04B198F2DF500BEA682 /* QHAntipodesMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C04A198F2DF500BEA682 /* QHAntipodesMapTests.m */; };
+		7449C056198F2E7800BEA682 /* QHRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C055198F2E7800BEA682 /* QHRootViewController.m */; };
+		7449C059198F2F9100BEA682 /* QHMapLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C058198F2F9100BEA682 /* QHMapLocationViewController.m */; };
+		7449C05B198F2FB400BEA682 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C05A198F2FB400BEA682 /* MapKit.framework */; };
+		7449C05D198F2FBA00BEA682 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C05C198F2FBA00BEA682 /* CoreLocation.framework */; };
+		7449C061198F38A800BEA682 /* QHLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C060198F38A800BEA682 /* QHLocationManager.m */; };
+		7449C06A198F5C6700BEA682 /* QHAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C069198F5C6700BEA682 /* QHAnnotationView.m */; };
+		7449C06D198F5E6600BEA682 /* QHAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C06C198F5E6600BEA682 /* QHAnnotation.m */; };
+		7449C071198F6E2000BEA682 /* QHGeoMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C070198F6E2000BEA682 /* QHGeoMapViewController.m */; };
+		7449C075198F6E7200BEA682 /* QHAntiLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7449C074198F6E7200BEA682 /* QHAntiLocation.m */; };
+		7449C077198F736000BEA682 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7449C076198F736000BEA682 /* QuartzCore.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7449C042198F2DF500BEA682 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7449C01A198F2DF500BEA682 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7449C021198F2DF500BEA682;
+			remoteInfo = QHAntipodesMap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7449C022198F2DF500BEA682 /* QHAntipodesMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QHAntipodesMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7449C025198F2DF500BEA682 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7449C027198F2DF500BEA682 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7449C029198F2DF500BEA682 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7449C02D198F2DF500BEA682 /* QHAntipodesMap-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QHAntipodesMap-Info.plist"; sourceTree = "<group>"; };
+		7449C02F198F2DF500BEA682 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7449C031198F2DF500BEA682 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7449C033198F2DF500BEA682 /* QHAntipodesMap-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QHAntipodesMap-Prefix.pch"; sourceTree = "<group>"; };
+		7449C034198F2DF500BEA682 /* QHAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QHAppDelegate.h; sourceTree = "<group>"; };
+		7449C035198F2DF500BEA682 /* QHAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHAppDelegate.m; sourceTree = "<group>"; };
+		7449C037198F2DF500BEA682 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7449C03D198F2DF500BEA682 /* QHAntipodesMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QHAntipodesMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7449C03E198F2DF500BEA682 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7449C046198F2DF500BEA682 /* QHAntipodesMapTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QHAntipodesMapTests-Info.plist"; sourceTree = "<group>"; };
+		7449C048198F2DF500BEA682 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7449C04A198F2DF500BEA682 /* QHAntipodesMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QHAntipodesMapTests.m; sourceTree = "<group>"; };
+		7449C054198F2E7800BEA682 /* QHRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHRootViewController.h; sourceTree = "<group>"; };
+		7449C055198F2E7800BEA682 /* QHRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHRootViewController.m; sourceTree = "<group>"; };
+		7449C057198F2F9100BEA682 /* QHMapLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHMapLocationViewController.h; sourceTree = "<group>"; };
+		7449C058198F2F9100BEA682 /* QHMapLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHMapLocationViewController.m; sourceTree = "<group>"; };
+		7449C05A198F2FB400BEA682 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7449C05C198F2FBA00BEA682 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7449C05F198F38A800BEA682 /* QHLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHLocationManager.h; sourceTree = "<group>"; };
+		7449C060198F38A800BEA682 /* QHLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHLocationManager.m; sourceTree = "<group>"; };
+		7449C068198F5C6700BEA682 /* QHAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAnnotationView.h; sourceTree = "<group>"; };
+		7449C069198F5C6700BEA682 /* QHAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAnnotationView.m; sourceTree = "<group>"; };
+		7449C06B198F5E6600BEA682 /* QHAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAnnotation.h; sourceTree = "<group>"; };
+		7449C06C198F5E6600BEA682 /* QHAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAnnotation.m; sourceTree = "<group>"; };
+		7449C06E198F62CA00BEA682 /* QHViewTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHViewTag.h; sourceTree = "<group>"; };
+		7449C06F198F6E2000BEA682 /* QHGeoMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHGeoMapViewController.h; sourceTree = "<group>"; };
+		7449C070198F6E2000BEA682 /* QHGeoMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHGeoMapViewController.m; sourceTree = "<group>"; };
+		7449C073198F6E7200BEA682 /* QHAntiLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QHAntiLocation.h; sourceTree = "<group>"; };
+		7449C074198F6E7200BEA682 /* QHAntiLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QHAntiLocation.m; sourceTree = "<group>"; };
+		7449C076198F736000BEA682 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7449C01F198F2DF500BEA682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449C077198F736000BEA682 /* QuartzCore.framework in Frameworks */,
+				7449C05D198F2FBA00BEA682 /* CoreLocation.framework in Frameworks */,
+				7449C05B198F2FB400BEA682 /* MapKit.framework in Frameworks */,
+				7449C028198F2DF500BEA682 /* CoreGraphics.framework in Frameworks */,
+				7449C02A198F2DF500BEA682 /* UIKit.framework in Frameworks */,
+				7449C026198F2DF500BEA682 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7449C03A198F2DF500BEA682 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449C03F198F2DF500BEA682 /* XCTest.framework in Frameworks */,
+				7449C041198F2DF500BEA682 /* UIKit.framework in Frameworks */,
+				7449C040198F2DF500BEA682 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7449C019198F2DF500BEA682 = {
+			isa = PBXGroup;
+			children = (
+				7449C02B198F2DF500BEA682 /* QHAntipodesMap */,
+				7449C044198F2DF500BEA682 /* QHAntipodesMapTests */,
+				7449C024198F2DF500BEA682 /* Frameworks */,
+				7449C023198F2DF500BEA682 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7449C023198F2DF500BEA682 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7449C022198F2DF500BEA682 /* QHAntipodesMap.app */,
+				7449C03D198F2DF500BEA682 /* QHAntipodesMapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7449C024198F2DF500BEA682 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7449C076198F736000BEA682 /* QuartzCore.framework */,
+				7449C05C198F2FBA00BEA682 /* CoreLocation.framework */,
+				7449C05A198F2FB400BEA682 /* MapKit.framework */,
+				7449C025198F2DF500BEA682 /* Foundation.framework */,
+				7449C027198F2DF500BEA682 /* CoreGraphics.framework */,
+				7449C029198F2DF500BEA682 /* UIKit.framework */,
+				7449C03E198F2DF500BEA682 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7449C02B198F2DF500BEA682 /* QHAntipodesMap */ = {
+			isa = PBXGroup;
+			children = (
+				7449C072198F6E4000BEA682 /* Util */,
+				7449C067198F5C4200BEA682 /* View */,
+				7449C05E198F388D00BEA682 /* Manager */,
+				7449C034198F2DF500BEA682 /* QHAppDelegate.h */,
+				7449C035198F2DF500BEA682 /* QHAppDelegate.m */,
+				7449C054198F2E7800BEA682 /* QHRootViewController.h */,
+				7449C055198F2E7800BEA682 /* QHRootViewController.m */,
+				7449C057198F2F9100BEA682 /* QHMapLocationViewController.h */,
+				7449C058198F2F9100BEA682 /* QHMapLocationViewController.m */,
+				7449C06F198F6E2000BEA682 /* QHGeoMapViewController.h */,
+				7449C070198F6E2000BEA682 /* QHGeoMapViewController.m */,
+				7449C037198F2DF500BEA682 /* Images.xcassets */,
+				7449C02C198F2DF500BEA682 /* Supporting Files */,
+			);
+			path = QHAntipodesMap;
+			sourceTree = "<group>";
+		};
+		7449C02C198F2DF500BEA682 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7449C06E198F62CA00BEA682 /* QHViewTag.h */,
+				7449C02D198F2DF500BEA682 /* QHAntipodesMap-Info.plist */,
+				7449C02E198F2DF500BEA682 /* InfoPlist.strings */,
+				7449C031198F2DF500BEA682 /* main.m */,
+				7449C033198F2DF500BEA682 /* QHAntipodesMap-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7449C044198F2DF500BEA682 /* QHAntipodesMapTests */ = {
+			isa = PBXGroup;
+			children = (
+				7449C04A198F2DF500BEA682 /* QHAntipodesMapTests.m */,
+				7449C045198F2DF500BEA682 /* Supporting Files */,
+			);
+			path = QHAntipodesMapTests;
+			sourceTree = "<group>";
+		};
+		7449C045198F2DF500BEA682 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7449C046198F2DF500BEA682 /* QHAntipodesMapTests-Info.plist */,
+				7449C047198F2DF500BEA682 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7449C05E198F388D00BEA682 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				7449C05F198F38A800BEA682 /* QHLocationManager.h */,
+				7449C060198F38A800BEA682 /* QHLocationManager.m */,
+				7449C06B198F5E6600BEA682 /* QHAnnotation.h */,
+				7449C06C198F5E6600BEA682 /* QHAnnotation.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		7449C067198F5C4200BEA682 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7449C068198F5C6700BEA682 /* QHAnnotationView.h */,
+				7449C069198F5C6700BEA682 /* QHAnnotationView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7449C072198F6E4000BEA682 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				7449C073198F6E7200BEA682 /* QHAntiLocation.h */,
+				7449C074198F6E7200BEA682 /* QHAntiLocation.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7449C021198F2DF500BEA682 /* QHAntipodesMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7449C04E198F2DF500BEA682 /* Build configuration list for PBXNativeTarget "QHAntipodesMap" */;
+			buildPhases = (
+				7449C01E198F2DF500BEA682 /* Sources */,
+				7449C01F198F2DF500BEA682 /* Frameworks */,
+				7449C020198F2DF500BEA682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QHAntipodesMap;
+			productName = QHAntipodesMap;
+			productReference = 7449C022198F2DF500BEA682 /* QHAntipodesMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7449C03C198F2DF500BEA682 /* QHAntipodesMapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7449C051198F2DF500BEA682 /* Build configuration list for PBXNativeTarget "QHAntipodesMapTests" */;
+			buildPhases = (
+				7449C039198F2DF500BEA682 /* Sources */,
+				7449C03A198F2DF500BEA682 /* Frameworks */,
+				7449C03B198F2DF500BEA682 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7449C043198F2DF500BEA682 /* PBXTargetDependency */,
+			);
+			name = QHAntipodesMapTests;
+			productName = QHAntipodesMapTests;
+			productReference = 7449C03D198F2DF500BEA682 /* QHAntipodesMapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7449C01A198F2DF500BEA682 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = chen;
+				TargetAttributes = {
+					7449C03C198F2DF500BEA682 = {
+						TestTargetID = 7449C021198F2DF500BEA682;
+					};
+				};
+			};
+			buildConfigurationList = 7449C01D198F2DF500BEA682 /* Build configuration list for PBXProject "QHAntipodesMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7449C019198F2DF500BEA682;
+			productRefGroup = 7449C023198F2DF500BEA682 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7449C021198F2DF500BEA682 /* QHAntipodesMap */,
+				7449C03C198F2DF500BEA682 /* QHAntipodesMapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7449C020198F2DF500BEA682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449C030198F2DF500BEA682 /* InfoPlist.strings in Resources */,
+				7449C038198F2DF500BEA682 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7449C03B198F2DF500BEA682 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449C049198F2DF500BEA682 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7449C01E198F2DF500BEA682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449C075198F6E7200BEA682 /* QHAntiLocation.m in Sources */,
+				7449C036198F2DF500BEA682 /* QHAppDelegate.m in Sources */,
+				7449C032198F2DF500BEA682 /* main.m in Sources */,
+				7449C06D198F5E6600BEA682 /* QHAnnotation.m in Sources */,
+				7449C061198F38A800BEA682 /* QHLocationManager.m in Sources */,
+				7449C071198F6E2000BEA682 /* QHGeoMapViewController.m in Sources */,
+				7449C056198F2E7800BEA682 /* QHRootViewController.m in Sources */,
+				7449C06A198F5C6700BEA682 /* QHAnnotationView.m in Sources */,
+				7449C059198F2F9100BEA682 /* QHMapLocationViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7449C039198F2DF500BEA682 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7449C04B198F2DF500BEA682 /* QHAntipodesMapTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7449C043198F2DF500BEA682 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7449C021198F2DF500BEA682 /* QHAntipodesMap */;
+			targetProxy = 7449C042198F2DF500BEA682 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		7449C02E198F2DF500BEA682 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7449C02F198F2DF500BEA682 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		7449C047198F2DF500BEA682 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7449C048198F2DF500BEA682 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7449C04C198F2DF500BEA682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7449C04D198F2DF500BEA682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7449C04F198F2DF500BEA682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QHAntipodesMap/QHAntipodesMap-Prefix.pch";
+				INFOPLIST_FILE = "QHAntipodesMap/QHAntipodesMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7449C050198F2DF500BEA682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QHAntipodesMap/QHAntipodesMap-Prefix.pch";
+				INFOPLIST_FILE = "QHAntipodesMap/QHAntipodesMap-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		7449C052198F2DF500BEA682 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QHAntipodesMap.app/QHAntipodesMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QHAntipodesMap/QHAntipodesMap-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "QHAntipodesMapTests/QHAntipodesMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		7449C053198F2DF500BEA682 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QHAntipodesMap.app/QHAntipodesMap";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QHAntipodesMap/QHAntipodesMap-Prefix.pch";
+				INFOPLIST_FILE = "QHAntipodesMapTests/QHAntipodesMapTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7449C01D198F2DF500BEA682 /* Build configuration list for PBXProject "QHAntipodesMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449C04C198F2DF500BEA682 /* Debug */,
+				7449C04D198F2DF500BEA682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7449C04E198F2DF500BEA682 /* Build configuration list for PBXNativeTarget "QHAntipodesMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449C04F198F2DF500BEA682 /* Debug */,
+				7449C050198F2DF500BEA682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7449C051198F2DF500BEA682 /* Build configuration list for PBXNativeTarget "QHAntipodesMapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7449C052198F2DF500BEA682 /* Debug */,
+				7449C053198F2DF500BEA682 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7449C01A198F2DF500BEA682 /* Project object */;
+}
