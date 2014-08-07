@@ -9,6 +9,8 @@
 #import "QHGeoMapViewController.h"
 
 #import "QHAnnotation.h"
+#import "QHLocationManager.h"
+#import "QHAnnotationView.h"
 
 @interface QHGeoMapViewController ()<MKMapViewDelegate>
 {
@@ -39,27 +41,25 @@
     MKCoordinateRegion region = MKCoordinateRegionMake(coordinate, span);
     [_geoMapV setRegion:region animated:YES];
     
-    CLGeocoder *clGeoCoder = [[[CLGeocoder alloc] init] autorelease];
-    CLGeocodeCompletionHandler handle = ^(NSArray *placemarks, NSError *error)
-    {
-        for (CLPlacemark * placeMark in placemarks)
-        {
-            NSDictionary *addressDic=placeMark.addressDictionary;
-            
-            __block NSString *Name = [addressDic objectForKey:@"Name"];
-            __block NSString *FormattedAddressLines = [[addressDic objectForKey:@"FormattedAddressLines"] objectAtIndex:0];
-            
-            __async_main__, ^
-            {
-                [_geoMapV removeAnnotations:_geoMapV.annotations];
-                QHAnnotation* an = [[QHAnnotation alloc] initWithTitle:Name SubTitle:FormattedAddressLines Coordinate:coordinate];
-                [_geoMapV addAnnotation:an];
-                [an release];
-            });
-        }
-    };
-    CLLocation *newLocation = [[CLLocation alloc] initWithLatitude:coordinate.latitude longitude:coordinate.longitude];
-    [clGeoCoder reverseGeocodeLocation:newLocation completionHandler:handle];
+    [[QHLocationManager defaultManager] getAddressInfo:coordinate complete:^(NSDictionary *addressDic)
+     {
+         NSString *Name = [addressDic objectForKey:@"Name"];
+         NSString *FormattedAddressLines = [[addressDic objectForKey:@"FormattedAddressLines"] objectAtIndex:0];
+         
+         __async_main__, ^
+         {
+             [_geoMapV removeAnnotations:_geoMapV.annotations];
+             QHAnnotation* an = [[QHAnnotation alloc] initWithTitle:Name SubTitle:FormattedAddressLines Coordinate:coordinate];
+             [_geoMapV addAnnotation:an];
+             [an release];
+         });
+    }];
+}
+
+- (void)setFrame:(CGRect)frame
+{
+    [self.view setFrame:frame];
+    [_geoMapV setFrame:self.view.bounds];
 }
 
 #pragma mark - MKMapViewDelegate
@@ -69,12 +69,8 @@
     MKPinAnnotationView* pinView = (MKPinAnnotationView*)[mapView dequeueReusableAnnotationViewWithIdentifier:@"ID"];
     if (pinView == nil)
     {
-        pinView = [[[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ID"] autorelease];
+        pinView = [[[QHAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"ID"] autorelease];
     }
-    
-    pinView.canShowCallout = YES;
-    pinView.pinColor = MKPinAnnotationColorGreen;
-    pinView.animatesDrop = YES;
     
     return pinView;
 }

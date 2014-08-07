@@ -14,4 +14,6 @@
 
 - (void)addGeoCLLocationCoordinate2D:(CLLocationCoordinate2D)coordinate;
 
+- (void)setFrame:(CGRect)frame;
+
 @end

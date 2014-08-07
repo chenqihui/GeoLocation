@@ -2,12 +2,13 @@
 //  QHAnnotationView.h
 //  QHAntipodesMap
 //
-//  Created by chen on 14-8-4.
+//  Created by chen on 14/8/4.
 //  Copyright (c) 2014年 chen. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
-@interface QHAnnotationView : UIView
+//重写地图的注标的view
+@interface QHAnnotationView : MKPinAnnotationView
 
 @end
