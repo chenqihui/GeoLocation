@@ -10,7 +10,6 @@
 
 @interface QHAntiLocation : NSObject
 
-//对跖点的计算
 + (CLLocationCoordinate2D) antipode:(CLLocationCoordinate2D)coordinate;
 
 @end

@@ -118,14 +118,14 @@
     {
         [_geobtn setHidden:NO];
         [_mainV setFrame:CGRectMake(0, 0, __iphone_width__, __iphone_height__)];
-        [_mapVC setFrame:_mainV.bounds];
-        [_geoMapVC setFrame:_mainV.bounds];
+        [_mapVC.view setFrame:_mainV.bounds];
+        [_geoMapVC.view setFrame:_mainV.bounds];
     }else if (UIDeviceOrientationIsLandscape(_currentOrientation))
     {
         [_geobtn setHidden:YES];
         [_mainV setFrame:CGRectMake(0, 0, __iphone_height__, __iphone_width__)];
-        [_mapVC setFrame:CGRectMake(0, 0, __iphone_height__/2, __iphone_width__)];
-        [_geoMapVC setFrame:CGRectMake(__iphone_height__/2, 0, __iphone_height__/2, __iphone_width__)];
+        [_mapVC.view setFrame:CGRectMake(0, 0, __iphone_height__/2 - 100, __iphone_width__)];
+        [_geoMapVC.view setFrame:CGRectMake(__iphone_height__/2, 0, __iphone_height__/2, __iphone_width__)];
         
         if ([_mapVC getGeoCLLocationCoordinate2D].latitude == -999 && [_mapVC getGeoCLLocationCoordinate2D].longitude == -999)
             return;

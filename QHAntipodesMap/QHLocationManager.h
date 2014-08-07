@@ -13,11 +13,10 @@
 
 + (QHLocationManager *)defaultManager;
 
+- (void)setMapView:(MKMapView *)mapView;
+
 - (void)startLocation;
 
 -(void)stopLocation;
-
-//通过坐标获取地理位置信息
-- (void)getAddressInfo:(CLLocationCoordinate2D)coordinate complete:(void(^)(NSDictionary *addressDic))complete;
 
 @end

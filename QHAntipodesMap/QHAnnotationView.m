@@ -2,7 +2,7 @@
 //  QHAnnotationView.m
 //  QHAntipodesMap
 //
-//  Created by chen on 14/8/4.
+//  Created by chen on 14-8-4.
 //  Copyright (c) 2014年 chen. All rights reserved.
 //
 
@@ -10,29 +10,22 @@
 
 @implementation QHAnnotationView
 
-- (id)initWithAnnotation:(id <MKAnnotation>)annotation reuseIdentifier:(NSString *)reuseIdentifier
+- (id)initWithFrame:(CGRect)frame
 {
-    self = [super initWithAnnotation:annotation reuseIdentifier:reuseIdentifier];
-    
-    self.canShowCallout = YES;//能显示Call信息 上面那些图字
-    self.pinColor = MKPinAnnotationColorRed;//只有三种
-    //大头针颜色
-    //MKPinAnnotationColorRed = 0,
-    //MKPinAnnotationColorGreen,
-    //MKPinAnnotationColorPurple
-    self.pinColor = MKPinAnnotationColorGreen;
-    self.animatesDrop = YES;//显示动画  从天上落下
-    
-    //注标的标题view
-    //    UIView* view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
-    //    view.backgroundColor = [UIColor redColor];
-    //    pinView.leftCalloutAccessoryView = view;
-    //    [view release];
-    //
-    //    UIButton* button = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-    //    pinView.rightCalloutAccessoryView = button;
-    
+    self = [super initWithFrame:frame];
+    if (self) {
+        // Initialization code
+    }
     return self;
 }
+
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect
+{
+    // Drawing code
+}
+*/
 
 @end
