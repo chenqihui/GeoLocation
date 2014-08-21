@@ -1,4 +1,9 @@
 GeoLocation
+
+![iamge](https://github.com/chenqihui/GeoLocation/blob/master/screenshots/GeoLocationGif.gif)
+
+![image](https://github.com/chenqihui/GeoLocation/blob/master/screenshots/GeoLocationHGif.gif)
+
 ===========
 
 1、根据当前位置或者长按自定义的位置坐标，通过计算得到对应的对跖点，然后点击翻转view，它会呈现在另一地图的注标
